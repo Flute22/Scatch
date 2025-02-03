@@ -11,7 +11,9 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "config": "^3.3.12",
     "cookie-parser": "^1.4.7",
+    "debug": "^4.4.0",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "mongoose": "^8.9.5",

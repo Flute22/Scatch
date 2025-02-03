@@ -25,6 +25,10 @@ app.use("/user", userRouter);
 app.use("/product", productRouter);
 
 
+app.get("/", (req, res) => {
+    res.send("Hey, Main server this side!")
+})
+
 
 app.listen(PORT, () => {
     console.log(`Server is running at port: ${PORT}`);

@@ -1,14 +1,9 @@
 import mongoose from "mongoose";
+import config from "config";
 
-/**
- * Establishes a connection to the MongoDB database
- * @function
- * @name db
- * @returns {Promise} - resolves to undefined on success, rejects with error on failure
- */
 const db = async () => {
     await mongoose
-        .connect("mongodb://127.0.0.1:27017/Scatch")
+        .connect(`${config.get("MONGODB_URI")}/scatch`)
         .then(() => console.log("MongoDb Connected"))
         .catch((err) => console.log("MongoDB Connection Error: ", err));   
 }
